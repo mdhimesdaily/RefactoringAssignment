@@ -8,17 +8,17 @@ public class InsuranceCalculator {
 
     public double calculateInsurance(double income) {
         if (income <= 10000) {
-            strategy = new InsuranceStrategyVeryHigh();
-            return strategy.calculateInsuranceVeryHigh(income);
+            strategy = new InsuranceStrategyLow();
+            return strategy.calculate(income);
         } else if (income <= 30000) {
-            strategy = new InsuranceStrategyVeryHigh();
-            return strategy.calculateInsuranceVeryHigh(income);
+            strategy = new InsuranceStrategyMedium();
+            return strategy.calculate(income);
         } else if (income <= 60000) {
-            strategy = new InsuranceStrategyVeryHigh();
-            return strategy.calculateInsuranceVeryHigh(income);
+            strategy = new InsuranceStrategyHigh();
+            return strategy.calculate(income);
         } else {
             strategy = new InsuranceStrategyVeryHigh();
-            return strategy.calculateInsuranceVeryHigh(income);
+            return strategy.calculate(income);
         }
     }
 
